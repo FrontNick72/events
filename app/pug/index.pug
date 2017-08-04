@@ -1,0 +1,117 @@
+extends include/template
+
+block title
+  title registry
+block description
+  +description('Event')
+block keywords
+  +keywords('Event, some, keywords')
+
+block css
+  +styles('css/main.css')
+
+block content
+    header.header
+      .container
+        nav.menu
+          a.menu__link(href="#") О клубе
+          a.menu__link.menu__link_active(href="#") Мероприятия
+          a.menu__link(href="#") Возможности
+          a.menu__link(href="#") Привилегии
+          a.menu__link(href="#") Форум
+          a.menu__link(href="#") Контакты
+
+        .title-block
+          .title-block__title Мероприятия
+          +breadcrumbs('Главная', 'Мероприятия')
+
+    section.events-comming
+      .container
+          h1.title Ближайшие мероприятия
+          .events
+            +event({
+              title: "Мероприятие",
+              text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/cook.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/runner.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/girl.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/family.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/runner.png)")
+
+          h1.title Прошедшие мероприятия
+          .events
+            +event({
+              title: "Мероприятие",
+              text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/cook.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/runner.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/girl.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/family.png)")
+            +event({
+              title: "Мероприятие",
+              text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
+              date: "5 июня",
+              time: "18:00",
+              locate: "ЖК «Ожогино», д.12, 1й подъезд"
+            })(style = "background-image: url(../img/general/runner.png)")
+
+          a.btn(href="#") Архив мероприятий
+
+    section.photoreports
+      .container
+        h1.title Фотоотчёты
+        .photo
+
+
+
+block scripts
+  +scripts('js/libs.min.js')
+  +scripts('js/scripts.js')

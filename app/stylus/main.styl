@@ -1,0 +1,192 @@
+// Normalize
+@import 'include/font-awesome.styl'
+@import 'include/normalize.styl'
+@import 'include/mixins.styl'
+@import 'include/fonts.styl'
+@import 'include/vars.styl'
+
+// Global styles
+*
+  box-sizing border-box
+
+.container
+  max-width 960px
+  margin 0 auto
+  padding 0 10px
+  width 100%
+
+
+// Global styles end
+body
+  background $white
+  font-family muller
+
+.clr
+  clear both
+
+//HEADER
+
+.header
+  background #7f7f7f
+  padding 99px 0 0 0
+  width 100%
+  .title-block
+    margin-top 52px
+  .breadcrumbs
+    margin 0
+
+.menu
+  background $white
+  box-sizing border-box
+  box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.18)
+  display flex
+  flex-wrap nowrap
+  justify-content space-between
+  padding 0 131px
+  width 100%
+  &__link
+    font-size 14px
+    font-weight 400
+    line-height: 80px
+    text-decoration none
+    text-transform uppercase
+    color $black
+    &:hover
+      color $green
+    &_active
+      color $green
+
+.title-block
+  background-color $green
+  padding 42px 0 30px 58px
+  box-sizing border-box
+  width 66.384%
+  &__title
+    font-size 40px
+    font-weight 500
+    text-align left
+    text-transform uppercase
+    color $white
+
+//Хлебные крошки
+.breadcrumbs
+  list-style none
+  padding 0
+  &__item
+    display inline
+    &:after
+      content "/"
+      font-size 12px
+      color rgba(255, 255, 255, 0.5)
+      font-weight 400
+      line-height 13px
+      margin 0 10px
+      position relative
+      bottom -1px
+      left 2px
+    &:last-child
+      &:after
+        display none
+  &__link
+    font-size 12px
+    color rgba(255, 255, 255, 0.5)
+    font-weight 400
+    line-height 13px
+    text-decoration none
+    &:hover
+      color rgba(255, 255, 255, 1)
+
+// Мероприятия
+.title
+    color  $green
+    font-size 26px
+    font-weight 500
+    line-height 50px
+    text-align left
+    padding 45px 0
+
+.events-comming,
+.events-last
+  text-align center
+  .btn
+    margin auto
+    margin-top 43px
+    margin-bottom 85px
+
+.btn
+  background-color #ff733f
+  border-radius 20px
+  color  $white
+  display block
+  font-size 14px
+  font-weight 400
+  line-height 39px
+  text-align center
+  text-decoration none
+  text-transform uppercase
+  height 39px
+  width 210px
+
+.events
+  display flex
+  flex-wrap wrap
+  margin 0 -10px
+  text-align left
+
+.events-item-wrap
+  padding 0 10px
+  width 33.3%
+  &:hover
+    cursor pointer
+    .events-item
+      background $green
+
+.events-item
+  display flex
+  background-size cover
+  background-position right
+  position relative
+  flex-direction column
+  justify-content space-between
+  padding 21px 36px 46px 20px
+  margin-bottom 25px
+  z-index 0
+  &:hover
+    &:before
+      background green
+  &:before
+    content ""
+    position absolute
+    background rgba(0,0,0,0.4)
+    top 0
+    left 0
+    height 100%
+    width 100%
+    z-index -1
+  &__header
+    height 140px
+    margin-bottom 45px
+  &__title
+    color $orange
+    font-size 14px
+    font-weight 700
+    padding-bottom 30px
+  &__text
+    color $white
+    font-size 14px
+    font-weight 400
+    line-height 20px
+  &__data
+    color $white
+    font-size 14px
+    font-weight 400
+    line-height: 36px;
+    .fa
+      margin-right 10px
+
+//Фотоотчёты
+.photoreports
+  background $grey
+
+
+
