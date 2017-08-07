@@ -57,18 +57,15 @@ mixin event(data)
           = data.locate
 
 mixin photo(data)
-  a.events-item-wrap
-    .events-item&attributes(attributes)
-      header.events-item__header
-        .events-item__title= data.title
-        .events-item__text= data.text
-      footer.events-item__footer
-        .events-item__data
+  a.photo-item&attributes(attributes)
+    .photo-item__info
+      header.photo-item__header
+        .photo-item__title= data.title
+        .photo-item__text= data.text
+      footer.photo-item__footer
+        .photo-item__data
           i.fa.fa-calendar-o
           = data.date
-        .events-item__data
-          i.fa.fa-clock-o
-          = data.time
-        .events-item__data
-          i.fa.fa-map-marker
-          = data.locate
+        .photo-item__data
+          i.fa.fa-picture-o
+          = data.count
