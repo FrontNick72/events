@@ -40,8 +40,8 @@ mixin content(h, head, ...p)
     p=text
 
 mixin event(data)
-  a.events-item-wrap
-    .events-item&attributes(attributes)
+  .events-item-wrap
+    a.events-item&attributes(attributes)(href="#")
       header.events-item__header
         .events-item__title= data.title
         .events-item__text= data.text
@@ -57,18 +57,15 @@ mixin event(data)
           = data.locate
 
 mixin photo(data)
-  a.events-item-wrap
-    .events-item&attributes(attributes)
-      header.events-item__header
-        .events-item__title= data.title
-        .events-item__text= data.text
-      footer.events-item__footer
-        .events-item__data
+  a.photo-preview&attributes(attributes)(href="#")
+    .photo-preview__info
+      header.photo-preview__header
+        .photo-preview__title= data.title
+        .photo-preview__text= data.text
+      footer.photo-preview__footer
+        .photo-preview__data
           i.fa.fa-calendar-o
           = data.date
-        .events-item__data
-          i.fa.fa-clock-o
-          = data.time
-        .events-item__data
-          i.fa.fa-map-marker
-          = data.locate
+        .photo-preview__data
+          i.fa.fa-picture-o
+          = data.count

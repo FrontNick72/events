@@ -9,17 +9,28 @@
 *
   box-sizing border-box
 
+a
+  text-decoration none
+
+h1,
+h2,
+h3
+  margin 0
+
 .container
-  max-width 960px
+
   margin 0 auto
   padding 0 10px
   width 100%
-
+  @media (min-width: 768px)
+    max-width 742px
+  @media (min-width: 1000px)
+    max-width 960px
 
 // Global styles end
 body
   background $white
-  font-family muller
+  font-family "Muller", Helvetica, Arial, sans-serif
 
 .clr
   clear both
@@ -28,26 +39,36 @@ body
 
 .header
   background #7f7f7f
-  padding 99px 0 0 0
+  padding 50px 0 0 0
   width 100%
+  @media (min-width: 768px)
+    padding 99px 0 0 0
   .title-block
     margin-top 52px
   .breadcrumbs
     margin 0
 
-.menu
+.menu-collapse,
+.menu-header
   background $white
   box-sizing border-box
   box-shadow: 0px 3px 4px 0 rgba(0, 0, 0, 0.18)
+  border-radius 3px
   display flex
   flex-wrap nowrap
   justify-content space-between
-  padding 0 131px
+  line-height 60px
+  text-transform uppercase
+  padding 0 31px
   width 100%
+  @media (min-width: 768px)
+    display none
+    line-height 80px
+  @media (min-width: 1000px)
+    padding 0 131px
   &__link
     font-size 14px
     font-weight 400
-    line-height: 80px
     text-decoration none
     text-transform uppercase
     color $black
@@ -56,22 +77,36 @@ body
     &_active
       color $green
 
+.menu-collapse
+  display none
+  flex-direction column
+  @media (min-width: 768px)
+    display flex
+    flex-direction row
+
+
 .title-block
   background-color $green
-  padding 42px 0 30px 58px
+  padding: 30px 30px 20px;
   box-sizing border-box
-  width 66.384%
+  width 100%
+  @media (min-width: 768px)
+    padding 42px 0 30px 58px
+    width 66.384%
   &__title
-    font-size 40px
+    font-size 28px
     font-weight 500
     text-align left
     text-transform uppercase
     color $white
+    @media (min-width: 768px)
+      font-size 40px
 
 //Хлебные крошки
 .breadcrumbs
   list-style none
   padding 0
+
   &__item
     display inline
     &:after
@@ -96,22 +131,32 @@ body
     &:hover
       color rgba(255, 255, 255, 1)
 
+
 // Мероприятия
 .title
-    color  $green
-    font-size 26px
-    font-weight 500
-    line-height 50px
-    text-align left
+  color  $green
+  font-size 26px
+  font-weight 500
+  line-height 50px
+  text-align left
+  padding 15px 0
+  @media (min-width: 1000px)
     padding 45px 0
+
 
 .events-comming,
 .events-last
   text-align center
   .btn
     margin auto
-    margin-top 43px
-    margin-bottom 85px
+    margin-top 13px
+    margin-bottom 45px
+    @media (min-width: 600px)
+      margin-top 23px
+      margin-bottom 65px
+    @media (min-width: 1000px)
+      margin-top 43px
+      margin-bottom 85px
 
 .btn
   background-color #ff733f
@@ -135,11 +180,11 @@ body
 
 .events-item-wrap
   padding 0 10px
-  width 33.3%
-  &:hover
-    cursor pointer
-    .events-item
-      background $green
+  width 100%
+  @media (min-width: 600px)
+    width 50%
+  @media (min-width: 1000px)
+    width 33.3%
 
 .events-item
   display flex
@@ -187,6 +232,149 @@ body
 //Фотоотчёты
 .photoreports
   background $grey
+  padding-bottom 44px
+  @media (min-width: 600px)
+    padding-bottom 64px
+  @media (min-width: 1000px)
+    padding-bottom 84px
+  .title
+    padding 37px 0 29px 0
+    margin 0
 
+.photo
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  &__right
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    width 100%
+    @media (min-width: 1000px)
+      width 48.9583%
 
+.photo-preview
+  background-size cover
+  background-position bottom right
+  display flex
+  cursor pointer
+  flex-direction column
+  justify-content flex-end
+  position relative
+  margin-bottom 21px
+  height 360px
+  width 100%
+  @media (min-width: 600px)
+    flex-direction row
+    justify-content flex-start
+    height 170px
+    width 47.659%
+  &_main
+    display flex
+    flex-direction column
+    justify-content flex-end
+    height 360px
+    width 100%
+    @media (min-width: 1000px)
+      width 48.8%
+  &:hover
+    .photo-preview__info
+      background #5c9800
+      display flex
+  &__info
+    background rgba(0,0,0,0.4)
+    display flex
+    padding 14px 32px 13px 20px
+    flex-direction column
+    justify-content space-between
+    @media (min-width: 600px)
+      background #5c9800
+      display none
+    ~/_main &
+      background rgba(0,0,0,0.4)
+      display flex
+      padding 16px 35px 9px 20px
+  &__header
+    height 73px
+  &__title
+    color $orange
+    font-size 14px
+    font-weight 700
+    padding-bottom 6px
+  &__text
+    color $white
+    font-size 14px
+    font-weight 400
+    line-height 20px
+  &__data
+    color $white
+    display inline-block
+    font-size 14px
+    font-weight 400
+    line-height 36px
+    &:last-child
+      margin-left 17px
+    .fa
+      margin-right 10px
 
+.footer
+  background-color $green
+  color rgb(255, 255, 255)
+  padding 50px 0px 40px
+  .row
+    display flex
+    align-items center
+    justify-content space-between
+    flex-direction column
+    @media (min-width: 768px)
+      flex-direction row
+
+.social
+  padding 7px 0
+  @media (min-width: 768px)
+    padding 0
+  &__link
+    display inline-block
+    width 30px
+    height 30px
+    line-height 30px
+    text-align center
+    border 1px solid #fff
+    border-radius 2px
+    transition all 0.2s ease-out
+    & + &
+      margin-left 10px
+    &:hover
+      background-color $orange
+      border-color $orange
+    .fa
+      color $white
+
+.partner
+  font-size 14px
+  color $white
+  padding 7px 0
+  @media (min-width: 768px)
+    padding 0
+
+.author
+  font-size 14px
+  color $white
+  padding 7px 0
+  @media (min-width: 768px)
+    padding 0
+  &__link
+    border-bottom 1px dotted
+    color #fff
+    font-weight 400
+
+//HAMBURGER
+.hamburger
+  cursor pointer
+  font-size 25px
+.cross
+  cursor pointer
+  padding-top 3px
+  font-size 50px
+.active-flex
+  display flex
