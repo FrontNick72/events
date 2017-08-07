@@ -1,0 +1,16 @@
+mixin event-preview(data)
+  .events-preview-wrap
+    a.events-preview&attributes(attributes)(href="#")
+      header.events-preview__header
+        .events-preview__title= data.title
+        .events-preview__text= data.text
+      footer.events-preview__footer
+        .events-preview__data
+          i.fa.fa-calendar-o
+          = data.date
+        .events-preview__data
+          i.fa.fa-clock-o
+          = data.time
+        .events-preview__data
+          i.fa.fa-map-marker
+          = data.locate

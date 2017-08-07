@@ -1,0 +1,42 @@
+.events-preview
+  display flex
+  background-size cover
+  background-position right
+  position relative
+  flex-direction column
+  justify-content space-between
+  padding 21px 36px 46px 20px
+  margin-bottom 25px
+  z-index 0
+  &:hover
+    &:before
+      background green
+  &:before
+    content ""
+    position absolute
+    background rgba(0,0,0,0.4)
+    top 0
+    left 0
+    height 100%
+    width 100%
+    z-index -1
+  &__header
+    height 140px
+    margin-bottom 45px
+  &__title
+    color $orange
+    font-size 14px
+    font-weight 700
+    padding-bottom 30px
+  &__text
+    color $white
+    font-size 14px
+    font-weight 400
+    line-height 20px
+  &__data
+    color $white
+    font-size 14px
+    font-weight 400
+    line-height: 36px;
+    .fa
+      margin-right 10px

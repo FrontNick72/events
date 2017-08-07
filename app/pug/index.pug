@@ -1,4 +1,6 @@
 extends include/template
+include ../components/event-preview/event-preview.pug
+include ../components/photo-preview/photo-preview.pug
 
 block title
   title registry
@@ -34,36 +36,36 @@ block content
   section.events-comming
     .container
         h2.title Ближайшие мероприятия
-        .events
-          +event({
+        .row
+          +event-preview({
             title: "Мероприятие",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/cook.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/runner.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/girl.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/family.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
             date: "5 июня",
@@ -72,36 +74,36 @@ block content
           })(style = "background-image: url(../img/general/runner.png)")
 
         h2.title Прошедшие мероприятия
-        .events
-          +event({
+        .row
+          +event-preview({
             title: "Мероприятие",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/cook.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/runner.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/girl.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             time: "18:00",
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/family.png)")
-          +event({
+          +event-preview({
             title: "Мероприятие",
             text: "Массовый «Соседский забег» для тех, кто хочет начать новую жизнь. Мероприятие для желающих подтянуться к лету.",
             date: "5 июня",
@@ -114,33 +116,33 @@ block content
   section.photoreports
     .container
       h2.title Фотоотчёты
-      .photo
-        +photo({
+      .row
+        +photo-preview({
           title: "Фотоотчёт",
           text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
           date: "5 июня",
           count: "25 фото"
         })(class = "photo-preview_main" style = "background-image: url(../img/general/eat.png)")
-        .photo__right
-          +photo({
+        .col
+          +photo-preview({
             title: "Фотоотчёт",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             count: "25 фото"
           })(style = "background-image: url(../img/general/eat.png)")
-          +photo({
+          +photo-preview({
             title: "Фотоотчёт",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             count: "25 фото"
           })(style = "background-image: url(../img/general/power.png)")
-          +photo({
+          +photo-preview({
             title: "Фотоотчёт",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
             count: "25 фото"
           })(style = "background-image: url(../img/general/student.png)")
-          +photo({
+          +photo-preview({
             title: "Фотоотчёт",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
             date: "5 июня",
