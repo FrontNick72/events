@@ -40,19 +40,19 @@ mixin content(h, head, ...p)
     p=text
 
 mixin event(data)
-  .events-item-wrap
-    a.events-item&attributes(attributes)(href="#")
-      header.events-item__header
-        .events-item__title= data.title
-        .events-item__text= data.text
-      footer.events-item__footer
-        .events-item__data
+  .events-preview-wrap
+    a.events-preview&attributes(attributes)(href="#")
+      header.events-preview__header
+        .events-preview__title= data.title
+        .events-preview__text= data.text
+      footer.events-preview__footer
+        .events-preview__data
           i.fa.fa-calendar-o
           = data.date
-        .events-item__data
+        .events-preview__data
           i.fa.fa-clock-o
           = data.time
-        .events-item__data
+        .events-preview__data
           i.fa.fa-map-marker
           = data.locate
 
