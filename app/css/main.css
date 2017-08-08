@@ -2575,7 +2575,7 @@ textarea {
   z-index: 0;
 }
 .events-preview:hover:before {
-  background: #008000;
+  background: #5c9800;
 }
 .events-preview:before {
   content: "";
@@ -2592,21 +2592,21 @@ textarea {
   margin-bottom: 45px;
 }
 .events-preview__title {
-  color: #ff733f;
   font-size: 14px;
   font-weight: 700;
+  color: #ff733f;
   padding-bottom: 30px;
 }
 .events-preview__text {
-  color: #fff;
   font-size: 14px;
   font-weight: 400;
+  color: #fff;
   line-height: 20px;
 }
 .events-preview__data {
-  color: #fff;
   font-size: 14px;
   font-weight: 400;
+  color: #fff;
   line-height: 36px;
 }
 .events-preview__data .fa {
@@ -2685,7 +2685,7 @@ textarea {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 14px 32px 13px 20px;
+  padding: 14px 20px 13px 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -2708,28 +2708,28 @@ textarea {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 16px 35px 9px 20px;
+  padding: 16px 20px 9px 20px;
 }
 .photo-preview__header {
   height: 73px;
 }
 .photo-preview__title {
-  color: #ff733f;
   font-size: 14px;
   font-weight: 700;
+  color: #ff733f;
   padding-bottom: 6px;
 }
 .photo-preview__text {
-  color: #fff;
   font-size: 14px;
   font-weight: 400;
+  color: #fff;
   line-height: 20px;
 }
 .photo-preview__data {
-  color: #fff;
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
+  color: #fff;
   line-height: 36px;
 }
 .photo-preview__data:last-child {
@@ -2767,7 +2767,7 @@ h3 {
 }
 body {
   background: #fff;
-  font-family: "Muller", Helvetica, Arial, sans-serif;
+  font-family: "Muller" , Helvetica , Arial, sans-serif;
 }
 .clr {
   clear: both;
@@ -3237,10 +3237,12 @@ body {
 }
 .hamburger {
   cursor: pointer;
+  color: #000;
   font-size: 25px;
 }
 .cross {
   cursor: pointer;
+  color: #000;
   padding-top: 3px;
   font-size: 50px;
 }

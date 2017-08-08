@@ -1,13 +1,13 @@
 mixin photo-preview(data)
-  a.photo-preview&attributes(attributes)(href="#")
-    .photo-preview__info
-      header.photo-preview__header
-        .photo-preview__title= data.title
-        .photo-preview__text= data.text
-      footer.photo-preview__footer
-        .photo-preview__data
-          i.fa.fa-calendar-o
+  +b.A(href="#").photo-preview&attributes(attributes)
+    +e.DIV.info
+      +e.HEADER.header
+        +e.title= data.title
+        +e.text= data.text
+      +e.FOOTER.footer
+        +e.data
+          +b.I.fa.fa-calendar-o
           = data.date
-        .photo-preview__data
-          i.fa.fa-picture-o
+        +e.data
+          +b.I.fa.fa-picture-o
           = data.count

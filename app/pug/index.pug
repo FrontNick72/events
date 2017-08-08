@@ -13,30 +13,30 @@ block css
   +styles('css/main.css')
 
 block content
-  header.header
-    .container
-      .menu
+  +b.HEADER.header
+    +b.container
+      +b.menu
         |
-        .menu-header
+        +b.menu-header
           | Меню
-          a.hamburger(href="#") &#9776
-          a.cross(href="#") &#735
-        nav.menu-collapse
-          a.menu-collapse__link(href="#") О клубе
-          a.menu-collapse__link.menu__link_active(href="#") Мероприятия
-          a.menu-collapse__link(href="#") Возможности
-          a.menu-collapse__link(href="#") Привилегии
-          a.menu-collapse__link(href="#") Форум
-          a.menu-collapse__link(href="#") Контакты
+          +b.A(href="#").hamburger &#9776
+          +b.A(href="#").cross &#735
+        +b.NAV.menu-collapse
+          +e.A(href="#").link О клубе
+          +e.A(href="#").link_active Мероприятия
+          +e.A(href="#").link Возможности
+          +e.A(href="#").link Привилегии
+          +e.A(href="#").link Форум
+          +e.A(href="#").link Контакты
 
-      .title-block
-        h1.title-block__title Мероприятия
+      +b.title-block
+        +e.H1.title Мероприятия
         +breadcrumbs('Главная', 'Мероприятия')
 
-  section.events-comming
-    .container
-        h2.title Ближайшие мероприятия
-        .row
+  +b.SECTION.events-comming
+    +b.container
+        +b.H2.title Ближайшие мероприятия
+        +b.row
           +event-preview({
             title: "Мероприятие",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
@@ -73,8 +73,8 @@ block content
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/runner.png)")
 
-        h2.title Прошедшие мероприятия
-        .row
+        +b.H2.title Прошедшие мероприятия
+        +b.row
           +event-preview({
             title: "Мероприятие",
             text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
@@ -111,12 +111,12 @@ block content
             locate: "ЖК «Ожогино», д.12, 1й подъезд"
           })(style = "background-image: url(../img/general/runner.png)")
 
-        a.btn(href="#") Архив мероприятий
+        +b.A(href="#").btn Архив мероприятий
 
-  section.photoreports
-    .container
-      h2.title Фотоотчёты
-      .row
+  +b.SECTION.photoreports
+    +b.container
+      +b.H2.title Фотоотчёты
+      +b.row
         +photo-preview({
           title: "Фотоотчёт",
           text: "Бесплатный семинар «Готовим дома» для домохозяек и работающих мам.",
@@ -149,20 +149,20 @@ block content
             count: "25 фото"
           })(style = "background-image: url(../img/general/kitchen.png)")
 
-  footer.footer
-    .container
-      .row
-        .partner 2015 © Партнер строй
-        .social
-          a.social__link(href="#")
-            i.fa.fa-facebook
-          a.social__link(href="#")
+  +b.FOOTER.footer
+    +b.container
+      +b.row
+        +b.partner 2015 © Партнер строй
+        +b.social
+          +e.A(href="#").link
+            +b.I.fa.fa-facebook
+          +e.A(href="#").link
             i.fa.fa-vk
-          a.social__link(href="#")
+          +e.A(href="#").link
             i.fa.fa-youtube-play
-        .author
+        +b.author
           |
-          a.author__link(href="#") Разработка сайта
+          +e.A.link(href="#") Разработка сайта
           |  - Агенство Creative
 
 

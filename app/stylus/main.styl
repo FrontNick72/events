@@ -23,15 +23,15 @@ h3
   margin 0 auto
   padding 0 10px
   width 100%
-  @media (min-width: 768px)
+  @media media-tablet
     max-width 742px
-  @media (min-width: 1000px)
+  @media media-desktop
     max-width 960px
 
 // Global styles end
 body
   background $white
-  font-family "Muller", Helvetica, Arial, sans-serif
+  font-main($MULLER\,, Helvetica\,, Arial)
 
 .clr
   clear both
@@ -42,7 +42,7 @@ body
   background #7f7f7f
   padding 50px 0 0 0
   width 100%
-  @media (min-width: 768px)
+  @media media-tablet
     padding 99px 0 0 0
   .title-block
     margin-top 52px
@@ -62,11 +62,11 @@ body
   text-transform uppercase
   padding 0 31px
   width 100%
-  @media (min-width: 768px)
+  @media media-tablet
     border-radius 3px
     display none
     line-height 80px
-  @media (min-width: 1000px)
+  @media media-desktop
     padding 0 131px
   &__link
     font-size 14px
@@ -83,7 +83,7 @@ body
   display none
   flex-direction column
   border-radius 0 0 3px 3px
-  @media (min-width: 768px)
+  @media media-tablet
     border-radius 3px
     display flex
     flex-direction row
@@ -94,7 +94,7 @@ body
   padding: 30px 30px 20px;
   box-sizing border-box
   width 100%
-  @media (min-width: 768px)
+  @media media-tablet
     padding 42px 0 30px 58px
     width 66.384%
   &__title
@@ -103,7 +103,7 @@ body
     text-align left
     text-transform uppercase
     color $white
-    @media (min-width: 768px)
+    @media media-tablet
       font-size 40px
 
 //Хлебные крошки
@@ -144,7 +144,7 @@ body
   line-height 50px
   text-align left
   padding 15px 0
-  @media (min-width: 1000px)
+  @media media-desktop
     padding 45px 0
 
 
@@ -160,10 +160,10 @@ body
     margin auto
     margin-top 13px
     margin-bottom 45px
-    @media (min-width: 600px)
+    @media media-mobile
       margin-top 23px
       margin-bottom 65px
-    @media (min-width: 1000px)
+    @media media-desktop
       margin-top 43px
       margin-bottom 85px
 
@@ -186,18 +186,18 @@ body
 .events-preview-wrap
   padding 0 10px
   width 100%
-  @media (min-width: 600px)
+  @media media-mobile
     width 50%
-  @media (min-width: 1000px)
+  @media media-desktop
     width 33.3%
 
 //Фотоотчёты
 .photoreports
   background $grey
   padding-bottom 44px
-  @media (min-width: 600px)
+  @media media-mobile
     padding-bottom 64px
-  @media (min-width: 1000px)
+  @media media-desktop
     padding-bottom 84px
   .title
     padding 37px 0 29px 0
@@ -213,7 +213,7 @@ body
     flex-wrap wrap
     justify-content space-between
     width 100%
-    @media (min-width: 1000px)
+    @media media-desktop
       width 48.9583%
 
 .footer
@@ -225,12 +225,12 @@ body
     align-items center
     justify-content space-between
     flex-direction column
-    @media (min-width: 768px)
+    @media media-tablet
       flex-direction row
 
 .social
   padding 7px 0
-  @media (min-width: 768px)
+  @media media-tablet
     padding 0
   &__link
     display inline-block
@@ -258,7 +258,7 @@ body
     flex-wrap wrap
     justify-content space-between
     width 100%
-    @media (min-width: 1000px)
+    @media media-desktop
       width 48.9583%
 
 .footer
@@ -270,12 +270,12 @@ body
     align-items center
     justify-content space-between
     flex-direction column
-    @media (min-width: 768px)
+    @media media-tablet
       flex-direction row
 
 .social
   padding 7px 0
-  @media (min-width: 768px)
+  @media media-tablet
     padding 0
   &__link
     display inline-block
@@ -298,14 +298,14 @@ body
   font-size 14px
   color $white
   padding 7px 0
-  @media (min-width: 768px)
+  @media media-tablet
     padding 0
 
 .author
   font-size 14px
   color $white
   padding 7px 0
-  @media (min-width: 768px)
+  @media media-tablet
     padding 0
   &__link
     border-bottom 1px dotted
@@ -316,9 +316,11 @@ body
 //HAMBURGER
 .hamburger
   cursor pointer
+  color $black
   font-size 25px
 .cross
   cursor pointer
+  color $black
   padding-top 3px
   font-size 50px
 .active-flex

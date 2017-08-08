@@ -32,6 +32,7 @@
     "imagemin-pngquant": "^5.0.1"
   },
   "dependencies": {
+    "bemto.pug": "^2.1.0",
     "font-awesome-stylus": "^4.7.1",
     "normalize-styl": "^4.1.1"
   },

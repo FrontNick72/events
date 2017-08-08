@@ -10,11 +10,11 @@ var gulp       = require('gulp'), // Подключаем Gulp
   imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
   pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
   cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
-  fontmin = require('gulp-fontmin'), //TTF to EOT, OTF, WOFF, SVG + Font-face
-  svgmin = require('gulp-svgmin'),
-  cheerio = require('gulp-cheerio'),
-  replace = require('gulp-replace'),
-  svgSprite = require('gulp-svg-sprite'),
+  fontmin      = require('gulp-fontmin'), //TTF to EOT, OTF, WOFF, SVG + font-face
+  svgmin       = require('gulp-svgmin'),
+  cheerio      = require('gulp-cheerio'),
+  replace      = require('gulp-replace'),
+  svgSprite    = require('gulp-svg-sprite'),
   autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 
